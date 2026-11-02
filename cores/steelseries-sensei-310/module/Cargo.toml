@@ -1,0 +1,25 @@
+# SteelSeries' core (the Sensei 310), as the WebAssembly module Ectomatter runs
+# (core.json names it). Built for wasm32-wasip2 by tools/build-cores.sh, which
+# puts it beside core.json as core.wasm. Its own workspace, since it builds
+# only for WebAssembly.
+[package]
+name = "steelseries-sensei-310-core"
+version = "1.1.0"
+edition = "2024"
+license = "GPL-3.0-only"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# the core protocol's words and its version, shared with Ectomatter
+ectomatter-protocol = { path = "../../../crates/ectomatter-protocol" }
+serde_json = "1"
+wit-bindgen = "=0.63.0"
+
+[workspace]
+
+[profile.release]
+lto = true
+strip = true

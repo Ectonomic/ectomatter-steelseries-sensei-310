@@ -1,0 +1,28 @@
+// How the Sensei 310's lights are made, so Ectomatter draws them as bright as
+// they are (the core protocol's section 4, the device's light): each is an
+// LED under a window of diffusing plastic. `window` is what every light has;
+// `keys` holds what one light has of its own, by its id, as a keyboard's
+// light holds each key's. The Mouse lab tunes these and saves them here.
+{
+  "window": {
+    // the light each LED gives off at full white, in lumens
+    "lumens": 0.8,
+    // the share of it that comes out of the window
+    "through": 0.5,
+    // how far under the window's face the LED sits, in millimeters
+    "depth": 8,
+    // the share that gets out round the window's edge onto the shell, and how
+    // far from the edge it reaches, in millimeters
+    "halo": 0.05,
+    "reach": 2
+  },
+  "keys": {
+    // the logo's halo is its own: as the drawing's glow on the palm showed it
+    // (mouse_art's halo_fit, within 7% of that light), and none at 0%
+    "logo": { "window": { "through": 0.425, "halo": 0.01, "reach": 2.5 } },
+    // the wheel's window is the gap beside it: from above, the rubber hides
+    // the lit wheel, and what shows is its light bounced off the slot's walls,
+    // dim and spread along the gap as SteelSeries' photo has it
+    "wheel": { "window": { "lumens": 0.25, "through": 0.03, "depth": 10, "halo": 0.01, "north": -6 } }
+  }
+}

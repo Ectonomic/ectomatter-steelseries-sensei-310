@@ -1,0 +1,9 @@
+# Who made each file here, and the license it comes under, in the REUSE
+# format (https://reuse.software/spec-3.3/). Every file is Ectonomic's own
+# unless a later table names it.
+version = 1
+
+[[annotations]]
+path = "**"
+SPDX-FileCopyrightText = "2026 Ectonomic LLC"
+SPDX-License-Identifier = "GPL-3.0-only"

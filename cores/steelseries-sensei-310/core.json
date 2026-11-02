@@ -1,0 +1,31 @@
+// The SteelSeries Sensei 310's core: what it is, the module Ectomatter runs,
+// and the devices that module may open (Ectomatter opens these and no others
+// for it). It's for the Sensei 310, and no other SteelSeries device.
+{
+  "id": "steelseries-sensei-310",
+  "kind": "core",
+  "name": "SteelSeries Sensei 310",
+  "version": "1.1.0",
+  "protocol": 4,          // the core protocol it speaks
+  "ectomatter": "0.1.0",    // the oldest Ectomatter it runs on
+  "module": "core.wasm",  // built from module/ by tools/build-cores.sh
+  "license": "GPL-3.0-only",
+  "description": "Buttons, lighting and sensitivity of the SteelSeries Sensei 310.",
+  "glyph": "glyph.svg",   // the device, drawn in the style of Ectomatter's own glyphs
+  "devices": ["SteelSeries Sensei 310"],  // the devices it works with, by name, for Ectomatter to say before any is plugged in
+  "matches": [
+    // the Sensei 310's command channel: its first interface, a page of SteelSeries' own
+    { "usb": { "vendor": "1038", "product": "1722", "usagePage": "FFC0" } },
+    // the same, where the system lists it by interface instead
+    { "usb": { "vendor": "1038", "product": "1722", "interface": 0 } },
+    // its key reports, read only: where a button given one of Ectomatter's host
+    // slots is heard, and every button sending a key while Ectomatter watches
+    { "usb": { "vendor": "1038", "product": "1722", "usagePage": "0001", "usage": "0006" } },
+    { "usb": { "vendor": "1038", "product": "1722", "interface": 2 } },
+    // its button reports, the pointer's, read only beside the computer: every
+    // button sending a click while Ectomatter watches
+    { "usb": { "vendor": "1038", "product": "1722", "usagePage": "0001", "usage": "0002" } },
+    { "usb": { "vendor": "1038", "product": "1722", "interface": 1 } }
+  ],
+  "uses": []
+}
