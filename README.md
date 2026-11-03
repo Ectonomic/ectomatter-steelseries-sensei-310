@@ -3,7 +3,7 @@
 Buttons, lighting and sensitivity of the SteelSeries Sensei 310.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Ectonomic/Ectomatter/main/docs/pictures/core-steelseries-sensei-310.png" width="260" alt="This core's drawing of the mouse, lit by Ectomatter: its logo teal and its scroll wheel orange">
+  <img src="pictures/steelseries-sensei-310.png" width="260" alt="This core's drawing of the mouse, lit by Ectomatter: its logo teal and its scroll wheel orange">
 </p>
 
 This is a core for [Ectomatter](https://github.com/Ectonomic/Ectomatter), one app for the devices on your desk. A core is the part of Ectomatter that talks to one device. It runs inside Ectomatter as a WebAssembly module and reaches only the USB devices its manifest (`core.json`) names.
@@ -29,6 +29,7 @@ Ectonomic builds its releases with Rust 1.98.1.
 
 - `core.json`, `glyph.svg`, `light.json`, `art/`: the core as Ectomatter installs it, its manifest and the files it carries
 - `module/`: the module's source
+- `pictures/`: the picture at the top of this README, made in Ectomatter's repository by `tools/readme-moving.sh`, and not part of the core
 
 Its commands were written from rivalcfg's profile of the mouse and libratbag's SteelSeries driver, used as references; neither is copied.
 
