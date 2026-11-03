@@ -2,6 +2,10 @@
 
 Buttons, lighting and sensitivity of the SteelSeries Sensei 310.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Ectonomic/Ectomatter/main/docs/pictures/core-steelseries-sensei-310.png" width="260" alt="This core's drawing of the mouse, lit by Ectomatter: its logo teal and its scroll wheel orange">
+</p>
+
 This is a core for [Ectomatter](https://github.com/Ectonomic/Ectomatter), one app for the devices on your desk. A core is the part of Ectomatter that talks to one device. It runs inside Ectomatter as a WebAssembly module and reaches only the USB devices its manifest (`core.json`) names.
 
 It is independent: not made, endorsed or supported by SteelSeries.
